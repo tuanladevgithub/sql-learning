@@ -10,11 +10,22 @@ SQL JOIN được dùng để kết hợp dữ liệu từ 2 hay nhiều bảng 
 
 ![SQL joins!](https://i.stack.imgur.com/4zjxm.png "SQL Joins")
 
-Có 4 kiểu JOIN:
+### 2.1. Các loại JOIN
+
+Có 4 loại JOIN trong SQL:
 - **INNER JOIN**: truy suất các records có giá trị trùng khớp với phép JOIN ở cả 2 bảng.
 - **LEFT (OUTER) JOIN**: truy suất tất cả records của bảng bên trái cùng các records phù hợp ở bảng bên phải.
 - **RIGHT (OUTER) JOIN**: truy suất tất cả records của bảng bên phải cùng các records phù hợp ở bảng bên trái.
 - **FULL (OUTER) JOIN**: truy suất tất cả các records khớp với phép JOIN hoặc ở bảng bên trái hoặc ở bảng bên phải.
+
+### 2.2. Self-join
+
+Là lệnh JOIN là trường hợp một bảng tự join với chính bảng đó thông qua các columns của nó.
+
+### 2.3 Cross-join
+
+- Lệnh cross-join được định nghĩa là tích Đề-các (Descartes) của 2 bảng trong phép join. Có nghĩa là sau khi join thì kết quá nhận được m x n records với m là số records của Table_A và n là số records của Table_B.
+- Lệnh **CROSS JOIN** không cần bổ sung điều kiện join để thực hiện. Tuy nhiên nếu sử dụng mệnh đề **WHERE** trong một câu lệnh cross join thì nó sẽ làm việc giống như một lênh **INNER JOIN**.
 
 ## 3. DELETE, TRUNCATE và DROP
 
