@@ -6,9 +6,15 @@
 
 ## 2. Định nghĩa JOIN và các loại JOIN
 
-JOIN được dùng khi truy vấn dữ liệu từ 2 hay nhiều bảng để trả về trong cùng một tập kết quả.
+SQL JOIN được dùng để kết hợp dữ liệu từ 2 hay nhiều bảng dựa trên các cột có liên quan giữa các bảng đó.
 
 ![SQL joins!](https://i.stack.imgur.com/4zjxm.png "SQL Joins")
+
+Có 4 kiểu JOIN:
+- **INNER JOIN**: truy suất các records có giá trị trùng khớp với phép JOIN ở cả 2 bảng.
+- **LEFT (OUTER) JOIN**: truy suất tất cả records của bảng bên trái cùng các records phù hợp ở bảng bên phải.
+- **RIGHT (OUTER) JOIN**: truy suất tất cả records của bảng bên phải cùng các records phù hợp ở bảng bên trái.
+- **FULL (OUTER) JOIN**: truy suất tất cả các records khớp với phép JOIN hoặc ở bảng bên trái hoặc ở bảng bên phải.
 
 ## 3. DELETE, TRUNCATE và DROP
 
