@@ -51,4 +51,15 @@ Các lệnh này được dùng để kết hợp dữ liệu từ nhiều câu 
 
 ## 6. Index
 
-Index được dùng để tăng tốc độ truy vấn dữ liệu.
+Database index là một cấu trúc dữ liệu cung cấp khả năng truy suất nhanh dữ liệu trong một hoặc nhiều columns của một bảng. Tuy nhiên để tăng cường tốc độ truy suất dữ liệu thì cũng sẽ phải đánh đổi về hiệu suất ghi dữ liệu và bộ nhớ vì cần duy trì cấu trúc dữ liệu index.
+
+### 6.1. Unique và Non-unique index
+
+### 6.2. Clustered and Non-Clustered Index
+
+- **Clustered index** là các index có thứ tự các rows trong database tương ứng với thứ tự các rows trong index. Chính vì vậy nên chỉ có một **clustered index** tồn tại trên một table nhất định, trong khi có thể có nhiều **non-clustered index** tồn tại trên 1 table.
+- Điểm khác biệt duy nhất giữa 2 loại index này đó là việc trình quản lý database sẽ luôn cố gắng để giữ cho dữ liệu theo thứ tự giống như thứ tự các keys trong **clustered index**, trong khi **non-clustered index** thì không.
+- Có 3 điểm nhỏ có thể nhận thấy từ điểm khác biệt ở trên:
+  - **clustered index** sẽ sửa đổi cách lưu trữ các records trên database dựa trên column được lập index. Còn **non-clustered index** sẽ tạo ra một thực thể riêng biệt trong bảng tham chiếu đến bảng gốc.
+  - **clustered index** giúp việc truy vấn dữ liệu nhanh hơn rất nhiều so với **non-clustered index** bởi vì không cần thông qua bản tham chiếu.
+  - Trong SQL, một table chỉ có duy nhất 1 **clustered index** trong khi có thể có nhiều **non-clustered index**. 
