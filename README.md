@@ -42,11 +42,12 @@ Các lệnh này được dùng để kết hợp dữ liệu từ nhiều câu 
 - **UNION ALL**: trả về tất cả records kết hợp từ 2 câu truy vấn kể cả những records trùng nhau.
 - **INTERSECT**: trả về những records trùng nhau từ 2 câu truy vấn.
 
-## 5. PRIMARY KEY vs. UNIQUE KEY
+## 5. PRIMARY KEY, UNIQUE CONSTRAINT vs. FOREIGN KEY
 
-- Một table chỉ có một **PRIMARY KEY** nhưng có thể có nhiều **UNIQUE KEY**
-- **PRIMARY KEY** không chấp nhận NULL, trong khi **UNIQUE KEY** thì chấp nhận cả NULL
-- clustered index được tạo tự động khi **PRIMARY KEY** được defined trong khi **UNIQUE KEY** tạo non-clustered index
+- Ràng buộc **PRIMARY KEY** dùng để xác định duy nhất mỗi hàng trong một bảng. Nó phải chứa các giá trị **UNIQUE** và **NOT NULL**. Mỗi table chỉ chứa duy nhất một **PRIMARY KEY**
+- Ràng buộc **UNIQUE** đảm bảo rằng tất cả các giá trị trong một cột phải khác nhau. Nó chứa các giá trị **UNIQUE** nhưng cho phép các giá trị **NULL**. Không giống **PRIMARY KEY**, mỗi table có thể chứa nhiều ràng buộc **UNIQUE**
+- **clustered index** được tạo tự động khi **PRIMARY KEY** được defined trong khi **UNIQUE CONSTRAINT** tạo **non-clustered index**
+- Một **FOREIGN KEY** bao gồm một hoặc tập hợp các fields trong bảng mà tham chiếu đến **PRIMARY KEY** của các bảng khác. Nó đảm bảo tính toàn vẹn tham chiếu trong mối quan hệ giữa 2 table.
 
 ## 6. Index
 
